@@ -1,0 +1,78 @@
+URL: http://localhost:8080/user/create
+Method Type : Post
+Payload:
+{
+	"userName": "satyaprakash",
+	"password": "test",
+	"email": "mailtospmehta@gmail.com",
+	"active": true
+}
+Output:
+{
+    "id": 1,
+    "status": "success"
+}
+--------------------------------------------
+URL: http://localhost:8080/user/update
+Method Type : Post
+Payload:
+{
+	"id": 1,
+	"userName": "satyaprakash",
+	"password": "test123",
+	"email": "mailtospmehta@gmail.com",
+	"active": true
+}
+
+Output : 
+{
+    "status": "success"
+}
+--------------------------------------------
+
+URL: http://localhost:8080/user/read/1
+Method Type : Get
+Payload : N/A
+Output : 
+{
+    "status": "success",
+    "object": {
+        "id": 1,
+        "userName": "satyaprakash",
+        "password": "$2a$10$A9eZ2r7Ebdbownkrudmj4uiEnYMyZUZHq8kj6oRnXiQoZ2KXcA8.K",
+        "email": "mailtospmehta@gmail.com",
+        "active": true
+    }
+}
+
+--------------------------------------------
+URL: http://localhost:8080/user/list
+Method Type : Get
+Payload : N/A
+Output : 
+{
+    "status": "success",
+    "object": [
+        {
+            "id": 1,
+            "userName": "satyaprakash",
+            "password": "$2a$10$A9eZ2r7Ebdbownkrudmj4uiEnYMyZUZHq8kj6oRnXiQoZ2KXcA8.K",
+            "email": "mailtospmehta@gmail.com",
+            "active": true
+        },
+        {
+            "id": 2,
+            "userName": "satyaprakashmehta",
+            "password": "$2a$10$A9eZ2r7Ebdbownkrudmj4uiEnYMyZUZHq8kj6oRnXiQoZ2KXcA8.K",
+            "email": "mehta.satyaprakash@gmail.com",
+            "active": true
+        },
+        {
+            "id": 4,
+            "userName": "omprakash",
+            "password": "$2a$10$PuyAVrXGK7bGbbpp95zPx.H4b2nL51cksMTFSXsBaxiO6cHYr2Ssy",
+            "email": "ops@gmail.com",
+            "active": true
+        }
+    ]
+}
