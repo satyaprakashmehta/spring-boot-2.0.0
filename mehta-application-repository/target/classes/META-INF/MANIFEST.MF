@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: mehta-applications-repository
+Implementation-Version: 1.0
+Built-By: Satya Prakash
+Implementation-Vendor-Id: com.sp.mehta
+Build-Jdk: 1.8.0_144
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/mehta-applications-repository
+Created-By: Maven Integration for Eclipse
+
