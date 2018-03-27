@@ -1,55 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	
-	<include resource="org/springframework/boot/logging/logback/base.xml"/>
-	
+
+	<!-- <include resource="org/springframework/boot/logging/logback/base.xml" /> -->
 	<property name="DEV_HOME" value="../logs" />
-	
-	<appender name="FILE-AUDIT"	class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+	<appender name="FILE-AUDIT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${DEV_HOME}/debug.log</file>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-			<Pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</Pattern>
+			<pattern>%date{dd-MMM-yyyy HH:mm:ss.SSS} - %-5level %logger{35} - %msg%n</pattern>
 		</encoder>
 
 		<!-- roll over POLICY FOR daily -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${DEV_HOME}/debug.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-			<timeBasedFileNamingAndTriggeringPolicy	class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+			<fileNamePattern>${DEV_HOME}/debug.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>25MB</maxFileSize>
 			</timeBasedFileNamingAndTriggeringPolicy>
 		</rollingPolicy>
 	</appender>
-	
+
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{dd-MM-yyyy HH:mm:ss} - %msg%n</pattern>
-        </encoder>
-    </appender>
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+		<encoder>
+			<pattern>%date{dd-MMM-yyyy HH:mm:ss.SSS} - %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
 
-	<logger name="com.sp.mehta" level="info" additivity="false">
+	<logger name="logging.level.com.sp.mehta" level="INFO"
+		additivity="false">
 		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</logger>
 	
-	<logger name="logging.level.org.springframework" level="error" additivity="false">
+	<logger name="logging.level.org.hibernate" level="ERROR"
+		additivity="false">
 		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</logger>
-	
-	<logger name="logging.level.org.hibernate" level="error" additivity="false">
-		<appender-ref ref="FILE-AUDIT" />
-		<appender-ref ref="STDOUT" />
-	</logger>
-
-	<logger name="logging.level.ch.qos" level="error" additivity="false">
-		<appender-ref ref="FILE-AUDIT" />
-		<appender-ref ref="STDOUT" />
-	</logger>
-	
-
-	<root level="warn" additivity="false">
+		
+	<root level="INFO">
 		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</root>
-	
+
 </configuration>
