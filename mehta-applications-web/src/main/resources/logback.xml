@@ -27,28 +27,28 @@
     </appender>
 
 	<logger name="com.sp.mehta" level="info" additivity="false">
-		<!-- <appender-ref ref="FILE-AUDIT" /> -->
+		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</logger>
 	
-	<logger name="logging.level.org.springframework" level="info" additivity="false">
-		<!-- <appender-ref ref="FILE-AUDIT" /> -->
+	<logger name="logging.level.org.springframework" level="error" additivity="false">
+		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</logger>
 	
 	<logger name="logging.level.org.hibernate" level="error" additivity="false">
-		<!-- <appender-ref ref="FILE-AUDIT" /> -->
+		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</logger>
 
-	<logger name="logging.level.ch.qos" level="warn" additivity="false">
-		<!-- <appender-ref ref="FILE-AUDIT" /> -->
+	<logger name="logging.level.ch.qos" level="error" additivity="false">
+		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</logger>
 	
 
 	<root level="warn" additivity="false">
-		<!-- <appender-ref ref="FILE-AUDIT" /> -->
+		<appender-ref ref="FILE-AUDIT" />
 		<appender-ref ref="STDOUT" />
 	</root>
 	

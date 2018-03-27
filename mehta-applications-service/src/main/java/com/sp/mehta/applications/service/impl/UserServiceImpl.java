@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService    {
 
 	@Override
 	public UserVo readUser(Integer id, String userId) {
-		User user = userRepository.findOne(id);
+		User user = userRepository.findById(id).get();
 		UserVo userVo = null;
 		if(user!=null){
 			userVo = new UserVo(user.getId());

@@ -28,7 +28,7 @@ public class RolesServiceImpl implements RolesService    {
 			Roles roles = new Roles();
 			User user = null;
 			if(rolesVo.getUserId()!=null) {
-				user = userRepository.findOne(rolesVo.getUserId());
+				user = userRepository.findById(rolesVo.getUserId()).get();
 				if(user!=null)
 					roles.setUser(user);
 			}
@@ -44,7 +44,7 @@ public class RolesServiceImpl implements RolesService    {
 
 	@Override
 	public RolesVo readRoles(Integer id, String rolesId) {
-		Roles roles = rolesRepository.findOne(id);
+		Roles roles = rolesRepository.findById(id).get();
 		RolesVo rolesVo = null;
 		if(roles!=null){
 			rolesVo = new RolesVo(roles.getId());

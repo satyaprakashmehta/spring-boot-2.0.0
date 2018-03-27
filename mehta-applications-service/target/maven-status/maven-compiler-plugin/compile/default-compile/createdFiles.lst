@@ -1,1 +1,8 @@
+com\sp\mehta\applications\service\impl\TestServiceImpl.class
+com\sp\mehta\applications\service\impl\RolesServiceImpl.class
+com\sp\mehta\applications\service\RolesService.class
+com\sp\mehta\applications\service\UserService.class
+com\sp\mehta\applications\service\impl\UserServiceImpl.class
+com\sp\mehta\applications\service\TestService.class
 com\sp\mehta\applications\service\AddressService.class
+com\sp\mehta\applications\service\impl\AddressServiceImpl.class

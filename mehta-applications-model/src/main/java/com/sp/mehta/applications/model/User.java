@@ -20,7 +20,7 @@ public class User implements Serializable {
 	private String 	userName;
 	private String 	password;
 	private String 	email;
-	private Boolean active;
+	private Boolean active = Boolean.TRUE;;
 	
 	public User() {
 		super();
@@ -84,7 +84,7 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	@Column(name="active",nullable=false,length=1)
+	@Column(name="active",nullable=false,length=1,columnDefinition = "tinyint(1) default 1")
 	public Boolean getActive() {
 		return active;
 	}

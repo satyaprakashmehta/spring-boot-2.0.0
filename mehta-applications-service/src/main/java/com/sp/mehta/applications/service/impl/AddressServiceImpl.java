@@ -40,7 +40,7 @@ public class AddressServiceImpl implements AddressService {
 			if(addressVo.getUserVo()!=null) {
 				Integer userId = addressVo.getUserVo().getId();
 				if(userId!=null) {
-					user = userRepository.findOne(userId);
+					user = userRepository.findById(userId).get();
 					if(user!=null) {
 						address.setUser(user);
 					}
@@ -70,7 +70,7 @@ public class AddressServiceImpl implements AddressService {
 		AddressVo addressVo = null;
 
 		if (id != null) {
-			Address address = addressRepository.findOne(id);
+			Address address = addressRepository.findById(id).get();
 
 			if (address != null) {
 				addressVo = new AddressVo();

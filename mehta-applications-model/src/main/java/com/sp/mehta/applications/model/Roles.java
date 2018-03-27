@@ -22,7 +22,7 @@ public class Roles implements Serializable {
 	private Integer id;
 	private User user;
 	private String role;
-	private Boolean active;
+	private Boolean active = Boolean.TRUE;;
 
 	public Roles() {
 		super();
@@ -69,7 +69,7 @@ public class Roles implements Serializable {
 		this.role = role;
 	}
 
-	@Column(name = "active")
+	@Column(name="active",nullable=false,length=1,columnDefinition = "tinyint(1) default 1")
 	public Boolean getActive() {
 		return active;
 	}
