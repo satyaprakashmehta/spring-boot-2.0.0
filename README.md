@@ -1,5 +1,4 @@
 # spring-boot
-Spring Boot, Angular with BootStrap
+Spring Boot 2.0.0, Angular with BootStrap
 
 
-https://satyaprakashmehta.github.io/spring-boot/
