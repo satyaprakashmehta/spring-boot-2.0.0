@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `spring_boot` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `spring_boot`;
+CREATE DATABASE  IF NOT EXISTS `spring_boot_2_0_0` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `spring_boot_2_0_0`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: localhost    Database: spring_boot
+-- Host: localhost    Database: spring_boot_2_0_0
 -- ------------------------------------------------------
 -- Server version	5.7.20-log
 
@@ -74,11 +74,11 @@ INSERT INTO `user` VALUES (1,1,'mailtospmehta@gmail.com','$2a$10$A9eZ2r7Ebdbownk
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'spring_boot'
+-- Dumping events for database 'spring_boot_2_0_0'
 --
 
 --
--- Dumping routines for database 'spring_boot'
+-- Dumping routines for database 'spring_boot_2_0_0'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

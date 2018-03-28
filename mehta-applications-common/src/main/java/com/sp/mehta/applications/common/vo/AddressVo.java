@@ -3,12 +3,15 @@ package com.sp.mehta.applications.common.vo;
 import java.io.Serializable;
 
 public class AddressVo implements Serializable {
+
+	private static final long serialVersionUID = -2733971176647800722L;
+
 	private String city;
 	private String state;
 	private String country;
 	private String pincode;
-    private UserVo userVo;
-	
+	private UserVo userVo;
+
 	public AddressVo() {
 	}
 
@@ -21,12 +24,11 @@ public class AddressVo implements Serializable {
 		this.setUserVo(userVo);
 	}
 
-	/*public AddressVo(Address address) {
-		this.city=address.getCity();
-		this.country=address.getCountry();
-		this.pincode=address.getPincode();
-		this.state=address.getState();
-	}*/
+	/*
+	 * public AddressVo(Address address) { this.city=address.getCity();
+	 * this.country=address.getCountry(); this.pincode=address.getPincode();
+	 * this.state=address.getState(); }
+	 */
 
 	public String getCity() {
 		return city;
